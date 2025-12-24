@@ -1,0 +1,126 @@
+<div class="cardMain">
+    <div class="cardData">
+        <div class="containerCardData">
+            <div class="header">
+                <div class="nombreLogo">
+                    <h5>DASHBOARD ONCE CAPITAL</h5>
+                    <img src="img_Doc/Logotipo_DOC.png" alt="header">
+                </div>
+                <div class="inputBoxSearch">
+                    <input type="text" placeholder="Búsqueda">
+                    <button><img src="img_Doc/icono_lupa.png" alt=""></button>
+                </div>
+            </div>
+            <div class="allContent">
+                <div class="tablaData">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="thead-tr noCliente">No de Cliente</th>
+                                <th class="thead-tr nombre">Nombre</th>
+                                <th class="thead-tr noTarjeta">No. de tarjeta</th>
+                                <th class="thead-tr ctaClabe">Cta. CLABE</th>
+                                <th class="thead-tr saldo">Saldo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for( item of dataInicial[0]; track $index ){
+                                <tr>
+                                    <td class="thead-td noCliente">{{item.noCliente}}</td>
+                                    <td class="thead-td nombre">{{item.Nombre}}</td>
+                                    <td class="thead-td noTarjeta">{{item.tarjeta}}</td>
+                                    <td class="thead-td ctaClabe">{{item.CLABE}}</td>
+                                    <td class="thead-td saldo">{{item.saldo}}</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h4 class="empresa">NOBLENEST SAPI SOFOM  DE ENR</h4>
+        </div>
+    </div>
+    <div class="cardObservations">
+            <div class="containerUser">
+                <div class="loginUser">
+                    <img src="img_Doc/icono_avatar.png" alt="loginUser">
+                    <h3>{{loginUser}}</h3>
+                </div>
+                <div class="allContentObservations">
+                    <div class="containerObservations">
+                        <span>Detalle del BRK</span>
+                        <div class="nombreEdicion">
+                            <span>{{nombreEdicion}}</span>
+                            <span>/Editar</span>
+                        </div>
+                        <div class="observationsEditable">
+                            @for( item of dataEditable[0]; track $index){
+
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Teléfono:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>{{item.Nombre}}</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                </div>
+                            }
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>Descargar</span>
+                                </div>
+                                <div>
+                                    <span>Usuario:</span>
+                                    <span>Descargar</span>
+                                </div>
+                        </div>
+                        <div class="btnAccionesObservaciones">
+                            <button type="button" >Cancelar</button>
+                            <button type="button" >Guardar cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+

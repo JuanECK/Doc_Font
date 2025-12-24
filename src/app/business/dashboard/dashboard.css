@@ -1,0 +1,159 @@
+/* estilos de la primera card */
+.containerCardData{
+    /* height: 100%; */
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 30px 40px;
+}
+.allContent{
+    margin: 30px 40px;
+}
+.nombreLogo{
+    display: flex;
+}
+.nombreLogo h5{
+    margin:55px 10px 0 0;
+    color: var(--Btn_reposo);
+    letter-spacing: -0.5px;
+    font-size: 11px;
+    font-weight: var(--Normal);
+}
+.inputBoxSearch input{
+    width: 264px;
+}
+
+.table{
+    color: var(--Blanco);
+    max-width: 1200px;
+    min-width: 800px;
+}
+.table  tbody{
+    height: 610px ;
+}
+.table tbody td{
+    font-size: 12px;
+}
+.table tbody tr{
+    border-bottom: solid 1px #61687D;
+}
+.table tbody tr:hover{
+    background: var(--Btn_hover);
+    cursor: pointer;
+}
+.noCliente{
+    min-width: 200px;
+    max-width: 200px;
+}
+.nombre{
+    min-width: 200px;
+    max-width: 200px;
+}
+.noTarjeta{
+    min-width: 200px;
+    max-width: 200px;
+}
+.ctaClabe{
+    min-width: 200px;
+    max-width: 200px;
+}
+.saldo{
+    min-width: 200px;
+    max-width: 200px;
+}
+.empresa{
+    text-align: center;
+    margin: 10px 0 10px 0;
+    color: var(--placeholder);
+    font-size: 11px;
+    font-weight: var(--Normal);
+}
+/* estilos de la segunda card */
+
+.containerUser{
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+.loginUser{
+    /* background-color: rgb(74, 110, 143); */
+    height: 80px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.loginUser h3{
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: var(--Normal);
+    color: var(--Blanco);
+}
+.allContentObservations{
+background-color: var(--backgroud-app);
+margin-left: 30px;
+height: 820px;
+}
+.containerObservations{
+    /* background-color: antiquewhite; */
+    margin: 20px;
+}
+.containerObservations span{
+    color: var(--Btn_reposo);
+}
+.containerObservations .nombreEdicion{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+    padding-bottom: 10px;
+    border-bottom: solid 1px var(--Btn_reposo);
+}
+.containerObservations .nombreEdicion span:nth-child(1){
+    color: var(--Blanco);
+    font-size: 14px;
+    font-weight: var(--Bold);
+}
+.observationsEditable div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    font-size: 12px;
+    font-weight: var(--Medium);
+}
+.observationsEditable div span:nth-child(2){
+    color: var(--Blanco);
+    margin: 2px 0 0 0;
+    padding: 2px 0 2px 0;
+}
+.observationsEditable div span input{
+    border: none;
+    
+}
+.observationsEditable div span input{
+    background: var(--backgroud-app);
+    color: var(--Blanco);
+    padding: 1px 0 1px 0;
+}
+.observationsEditable div span input:focus{
+    outline: none;
+    color: var(--Blanco);
+    background: var(--Btn_reposo);
+    width: 100%;
+}
+.btnAccionesObservaciones{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.btnAccionesObservaciones button{
+    background: none;
+    border: none;
+}
+.btnAccionesObservaciones button:nth-child(1){
+    color: var(--btn_activo);
+}
+.btnAccionesObservaciones button:nth-child(2){
+    color: var(--Menu_desplegable);
+}

@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    /* font-weight tipografias y paleta de colores */
+    --Thin:100;
+    --Extra-Light:300;
+    --Light:300;
+    --Normal:400; /* Regular */
+    --Medium:500;
+    --Semi-Bold:600;
+    --Bold:800;
+    --Extra-Bold:900;
+    --Blanco:#FFFFFF;
+    --backgroud-app:#121832;
+    --btn_activo:#F4797A ;
+    --Menu_desplegable:#46DB89;
+    --Btn_reposo:#3A4669;
+    --scroll_hover:#353e58;
+    --Btn_hover:#222A45;
+    --placeholder:#61687D;
+    --Deg_base1:#676DFC ;
+    --background-Gradient1: linear-gradient(90deg,#676dfc 42%, #1c85fd 96%);
+    --Deg_base2: #253250;
+    --background-Gradient2: linear-gradient(180deg, #253250 0%, #5472B6 48%, #5472B6 55%, #253250 100%);
+    --Deg_base3: #3E5C98;
+    --background-Gradient3:linear-gradient(180deg,rgba(62, 92, 152, 1) 0%, rgba(44, 61, 95, 1) 80%, rgba(44, 61, 95, 1) 100%);
+}
+body{
+    background-color: var(--backgroud-app);
+    margin:0 !important;
+    padding: 0 !important;
+    font-family: 'Roboto';
+    /* overflow-y: hidden; */
+}
+
+ ::-webkit-scrollbar-button {  
+        background-color: var(--backgroud-app); 
+         
+    }  
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background: var(--Btn_hover);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--Btn_reposo);
+    
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--scroll_hover);
+    
+}
+::-webkit-scrollbar-track{
+    width: 10px;
+}
+.cardMain{
+    display: grid;
+    grid-template-columns: 1300px 375px ;
+    /* width: 900px; */
+}
+.cardData{
+    background: var(--background-Gradient2); 
+    /* border: solid 1px #46DB89; */
+    height: 900px;
+    /* min-width: 1300px; */
+}
+.cardObservations{
+    /* border: solid 1px #46DB89; */
+    /* min-width: 375px; */
+    /* height: 100%; */
+    background: var(--background-Gradient3);  
+    
+}
+/* Estilos del buscador personalizado */
+.inputBoxSearch{
+    position: relative;
+}
+.inputBoxSearch input{
+    width: 264px;
+    background: var(--backgroud-app);
+    height: 38px;
+    border-radius: 50px;
+    border: none;
+    padding: 0 40px 0 15px;
+    color: var(--Blanco);
+}
+.inputBoxSearch input:focus{
+    outline: none;
+}
+.inputBoxSearch button{
+    position: absolute;
+        display: block;
+        bottom: .4rem;
+        right: 0.3rem;
+        cursor:pointer;
+        border: none;
+        background: none;
+}
+/* Tabla con header si mover  */
+.table{
+    table-layout: auto;
+    width: 100%;
+
+    thead, tbody{
+        display: block;
+        border-collapse: collapse;
+    }
+    tbody{
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+    } 
+}
+
+.thead-tr{
+    font-size: 14px;
+    font-weight: var(--Semi-Bold);
+    padding: 8px 8px 8px 8px;
+    width: 10%;
+    text-align: left;
+}
+.thead-td{
+    font-size: 14px;
+    font-weight: var(--Semi-Bold);
+    padding: 8px 8px 8px 8px;
+    width: 10%;
+    text-align: left;
+}
+
+
+
+/* ---------------------------------------- */
+
+ /* tr:nth-child(even) {
+	background-color: #EFEFEF;
+}  */
+
+

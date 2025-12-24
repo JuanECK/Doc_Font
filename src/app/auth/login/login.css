@@ -1,0 +1,55 @@
+
+.wrapper_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.input_box input{
+    background: var(--Btn_reposo);
+    width: 231px;
+    height: 38px;
+    border-radius: 50px;
+    border: none;
+    padding: 0 15px 0 15px;
+    color: var(--Blanco);
+    margin-top: 20px;
+}
+.input_box input::placeholder{
+    color: var(--placeholder);
+}
+.input_box input:focus{
+    outline: none;
+}
+.wrapper_login button{
+    background: var(--background-Gradient1);
+    width: 261px;
+    height: 38px;
+    border-radius: 50px;
+    border: none;
+    color: var(--Blanco);
+     margin-top: 20px;
+     font-weight: var(--Normal);
+     box-shadow: -4px 6px 6px rgba(0, 0, 0, 0.5);
+}
+.errorPass{
+    position: absolute;
+    width: 261px;
+    /* position: relative; */
+}
+.errorPass p {
+    align-items:center;
+    color: var( --btn_activo);
+    font-size: 14px;
+    font-weight: var(--Medium);
+    /* margin-left: 10px; */
+    /* padding-left: 2.6rem; */
+}
+.version span{
+    color: var(--Blanco);
+    position: absolute;
+    right: 150px;
+    bottom: 30px;
+    font-size: 10px;
+}

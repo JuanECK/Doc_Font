@@ -1,0 +1,85 @@
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <h2>Once Capital</h2>
+    </div>
+            <ul class="dropdown-menu">
+                <li class="nav-item-inicio">
+                    <div class="inicio" >
+                        <img src="img_Doc/inicio.png" alt="link-side">
+                        <a [routerLink]="['/main/Dashboard']"  class="nav-item-inicio dropdown-title-inicio" (click)="linkActivo($event)"><p  routerLinkActive="link-Active">Inicio</p></a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="dropdown-menu">
+                <li class="nav-item-chevron" >
+                    <div class="elemento-chevron" >
+                        <a (click)="clicEventMenu($event)" class="nav-item dropdown-title"><p #onceCapital>Once Capital <img src="img_Doc/chevron_down.png" alt="link-side" id="img"></p></a>
+                    <!-- <a onclick="$event.stopPropagation()" class="nav-item dropdown-title"><p>Once Capital <img src="img_Doc/chevron_down.png" alt="link-side"></p></a> -->
+                    </div>
+                    <ul class="dropdown-menu-toggle"#toggle1>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a [routerLink]="['/main/once/clientes']" class="nav-item dropdown-link" (click)="desactivarLink(2)"><p routerLinkActive="link-Active">Clientes</p></a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>Consulta de tarjeta</p> </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>Consulta CLABE</p> </a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>Movimientos Tarjeta</p> </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>SPEI IN CLABE</p> </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>Registro de Clientes</p> </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>Centros de Negocio</p> </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>Reposición de tarjeta</p> </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                    <a href="" class="nav-item dropdown-link"><p>Excel Clientes Once</p> </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="dropdown-menu">
+                <li class="nav-item-chevron" >
+                        <div class="elemento-chevron" >
+                            <a (click)="clicEventMenu($event)" class="nav-item dropdown-title"><p>Nominon <img src="img_Doc/chevron_down.png" alt="link-side"  id="img"></p></a>
+                        </div>
+                    <ul class="dropdown-menu-toggle" #toggle1>
+                        <li class="nav-item">
+                            <div class="element-a">
+                                <a [routerLink]="['/main/once/prueba']" class="nav-item dropdown-link" (click)="desactivarLink(3)"><p routerLinkActive="link-Active">prueba</p> </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+</aside>
+

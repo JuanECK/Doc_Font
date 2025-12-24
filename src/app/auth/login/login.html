@@ -1,0 +1,20 @@
+<p>login works!</p>
+<div class="wrapper_login">
+    <form [formGroup]="credenciales()" autocomplete="off" >
+        <img src="img_Doc/IconoDOC.svg" style="width: 258.96px; height: 260.37px;" alt="">
+        <div class="input_box">
+            <input type="text" formControlName="email" placeholder="Usuario" (click)="MensajeError()">
+        </div>
+        <div class="input_box">
+            <input type="password" formControlName="pass" placeholder="Contraseña" (click)="MensajeError()">
+        </div>
+        <button type="submit" (click)="login()" class="btn_login">Entrar</button>
+        <div class="errorPass">
+            <p #respHerror ></p>
+        </div>
+    </form>
+</div>
+<div class="version">
+    <span>VER.1.0</span>
+</div>
+<button >click {{prueba}}</button>
