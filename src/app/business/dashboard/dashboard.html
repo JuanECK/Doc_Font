@@ -25,11 +25,11 @@
                         </thead>
                         <tbody>
                             @for( item of dataInicial[0]; track $index ){
-                                <tr>
+                                <tr (click)="cargaUsuarioSeleccionado( item.noCliente )">
                                     <td class="thead-td noCliente">{{item.noCliente}}</td>
-                                    <td class="thead-td nombre">{{item.Nombre}}</td>
-                                    <td class="thead-td noTarjeta">{{item.tarjeta}}</td>
-                                    <td class="thead-td ctaClabe">{{item.CLABE}}</td>
+                                    <td class="thead-td nombre">{{item.nombre}}</td>
+                                    <td class="thead-td noTarjeta">{{item.noTarjeta}}</td>
+                                    <td class="thead-td ctaClabe">{{item.clabe}}</td>
                                     <td class="thead-td saldo">{{item.saldo}}</td>
                                 </tr>
                             }
@@ -38,6 +38,7 @@
                 </div>
             </div>
             <h4 class="empresa">NOBLENEST SAPI SOFOM  DE ENR</h4>
+            <h4 class="empresa">{{dataInicial}}</h4>
         </div>
     </div>
     <div class="cardObservations">

@@ -1,6 +1,7 @@
 import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthLoginService } from '../../../app/core/services/auth.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { AuthLoginService } from '../../../app/core/services/auth.service'
 export class Login {
 constructor(
     private AuthLoginService: AuthLoginService,
-    // private cdr:ChangeDetectorRef,
+    private router:Router,
   ){}
 
   @ViewChild('respHerror') respHerror!:ElementRef;
@@ -29,36 +30,44 @@ constructor(
   )
 
   ngOnInit(): void {
-    // this.cdr.detectChanges();
+
+    this.isLoggin()
+
+  }
+
+  async isLoggin():Promise<boolean> {
+
+    return await this.AuthLoginService.isAutenticate().then( auth => {
+
+      if( auth ){
+
+        this.router.navigate(['/']);
+        return true;
+
+      }else{
+        return false;
+      }
+
+    } )
+
   }
 
   login():Promise<boolean> | boolean {
 
     const email = this.credenciales().get('email')?.value;
     const pass = this.credenciales().get('pass')?.value;
-    // this.errorResp = ''
-    // this.errorPass = true;
 
     return this.AuthLoginService.login(email , pass).then( value => {
       this.user = value!.log
       if( this.user ){
-        console.log('aqui')
+        console.log('genial todo bien')
+        localStorage.setItem('sesion', JSON.stringify(value.data))
+        this.router.navigate(['/']);
         return true
       }else{
-        // this.errorResp = 'errorrrr'
-        // this.RespuestaError = value.error
+        console.log('Na error')
         this.errorPass = false;
-        setTimeout(()=>{
-          this.respHerror.nativeElement.innerHTML = value.error
-          console.log('this ',value.error)
-        },100)
-        // this.ver(value.error)
-
-        // this.credenciales().reset({
-        //   'email':'',
-        //   'pass':''
-        // })
-        // this.cdr.detectChanges();
+        this.respHerror.nativeElement.innerHTML = value.error
         return false
       }
     })
@@ -68,25 +77,15 @@ constructor(
     if(this.errorPass == false){
       this.errorPass = true;
       this.respHerror.nativeElement.innerHTML = ''
-      // setTimeout(()=>{
-      //   this.RespuestaError = ''
-      // },100)
       // this.credenciales().reset({
       //   'email':'',
       //   'pass':''
       // })
     }
-    // this.cdr.detectChanges();
+
   }
   
   ver( error:string ){
-    // setTimeout(()=>{
-    //   this.errorResp = 'problemasss'
-    // },100)
-    // console.log(this.RespuestaError)
-    this.respHerror.nativeElement.innerHTML = error
-    this.prueba = error
-    console.log(this.prueba)
-    // this.cdr.detectChanges();
+
   }
 }

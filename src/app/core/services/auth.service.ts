@@ -22,20 +22,52 @@ export class AuthLoginService {
                 })
             })
             const data = await response.json();
-            // console.log(data)
+            console.log(data)
             if(data.status == 200){
+                return {
+                    log:dataCookie = true,
+                    data:{Id:data.data.Id, Nombre:data.data.Nombre},
+                    error:data.error
+                }
+            }else{
+                return {
+                    log:dataCookie = false,
+                    error:data.error
+                }
+            }
+
+        } catch (error) {
+            throw new Error()
+        }
+
+    }
+
+
+    async isAutenticate(){
+        let dataCookie:boolean = false;
+        try {
+
+            const response = await fetch( 'http://localhost:3000/auth/cookie',{
+                method:'GET',
+                credentials: 'include',
+                headers: {
+                    'Content-Type':'application/json'
+                }
+            } )
+            const data = await response.json();
+            // console.log(data)
+            if( data.response === true ){
                 dataCookie = true;
             }else{
                 dataCookie = false;
             }
-            return {
-                log:dataCookie,
-                error:data.error
-            }
+
+            return dataCookie;
+            
         } catch (error) {
-            // throw {log:false}
-            throw new Error()
+            throw new Error( JSON.stringify(error) )
         }
+
 
     }
 
