@@ -2,10 +2,13 @@
     position: relative;
     width: 187px;
     left: 10px;
+    height: 790px;
 }
 
 .sidebar-header{
     color: var(--Blanco);
+    text-align: center;
+    font-family: 'SuperMario';
 }
 
 .sidebar ul,
@@ -58,7 +61,7 @@ background: var(--Btn_hover);
 .nav-item-chevron .elemento-chevron a img{
     position: absolute;
     right: 0px;
-    bottom: 10px;
+    bottom: 4px;
     z-index: 1;
 }
 .nav-item .element-a p{
@@ -91,8 +94,18 @@ background: var(--Btn_hover);
     }
     100% {
         opacity: 1;
-        transform: translateY(0%)
+        transform: translateY(0%);
+
     }
+}
+
+.rotar{
+    transform: rotateZ( 45deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.rotar-off{
+    transition: transform 0.2s ease-in-out;
 }
 
 
@@ -100,5 +113,6 @@ background: var(--Btn_hover);
   color: var(--btn_activo);
 }
 .menuDesplegadoActivo{
-    color: var(--Menu_desplegable)
+    color: var(--Menu_desplegable);
+    font-family: 'SuperMario';
 }

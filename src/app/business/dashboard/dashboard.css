@@ -87,9 +87,10 @@
 }
 .loginUser h3{
     margin-left: 15px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: var(--Normal);
     color: var(--Blanco);
+    font-family: 'SuperMario';
 }
 .allContentObservations{
 background-color: var(--backgroud-app);
@@ -114,6 +115,17 @@ height: 820px;
     color: var(--Blanco);
     font-size: 14px;
     font-weight: var(--Bold);
+}
+.containerObservations .nombreEdicion span:nth-child(2){
+    cursor: pointer;
+}
+.containerObservations .nombreEdicion span:nth-child(2) img{
+    position: relative;
+    top: 3px;
+    right: 3px;
+}
+.activo{
+    background: var(--Btn_reposo) !important;
 }
 .observationsEditable div{
     display: flex;
@@ -150,6 +162,7 @@ height: 820px;
 .btnAccionesObservaciones button{
     background: none;
     border: none;
+    cursor: pointer;
 }
 .btnAccionesObservaciones button:nth-child(1){
     color: var(--btn_activo);

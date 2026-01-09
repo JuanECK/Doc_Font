@@ -38,87 +38,90 @@
                 </div>
             </div>
             <h4 class="empresa">NOBLENEST SAPI SOFOM  DE ENR</h4>
-            <h4 class="empresa">{{dataInicial}}</h4>
         </div>
     </div>
     <div class="cardObservations">
             <div class="containerUser">
                 <div class="loginUser">
-                    <img src="img_Doc/icono_avatar.png" alt="loginUser">
+                    <img src="img_Doc/Avatar_masculino.png" alt="loginUser">
                     <h3>{{loginUser}}</h3>
                 </div>
                 <div class="allContentObservations">
                     <div class="containerObservations">
                         <span>Detalle del BRK</span>
-                        <div class="nombreEdicion">
-                            <span>{{nombreEdicion}}</span>
-                            <span>/Editar</span>
-                        </div>
-                        <div class="observationsEditable">
-                            @for( item of dataEditable[0]; track $index){
+                        @for( item of dataEditable[0]; track $index){
+                            <div class="nombreEdicion">
+                                <span>{{item.nombre+' '+item.primerApellido}}</span>
+                                <span><a (click)="edicionActivo()"><img src="img_Doc/Icono_editar.png">Editar</a></span>
+                            </div>
+                            <div class="observationsEditable">
 
                                 <div>
                                     <span>Usuario:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>{{item.nombre+' '+item.primerApellido+' '+item.segundoApellido}}</span>
+                                </div>
+                                <div>
+                                    <span>Correo:</span>
+                                    <span>{{item.correo}}</span>
                                 </div>
                                 <div>
                                     <span>Teléfono:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>{{item.telefono}}</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>Status:</span>
+                                    <span>{{item.estatus}}</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>Identificador:</span>
+                                    <span>{{item.identificador}}</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>Tipo de cuenta:</span>
+                                    <span>{{item.tipoCuenta}}</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>Centro de negocios:</span>
+                                    <span>{{item.centroNegocio}}</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>Estado:</span>
+                                    <span>{{item.estado}}</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span>{{item.Nombre}}</span>
+                                    <span>Comisión:</span>
+                                    <span>{{item.comision}}</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                    <span>Límite de SPEI por monto</span>
+                                    <span [classList]="edicion ? '':'activo' "><input type="text" [classList]="edicion ? '':'activo' " [value]="[item.montoSPEI]" [disabled]="edicion"></span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                    <span>Límite de SPEI por transacción</span>
+                                    <span [classList]="edicion ? '':'activo' "><input type="text" [classList]="edicion ? '':'activo' " [value]="[item.transaccionSPEI]" [disabled]="edicion"></span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                    <span>Límite por día ATM:</span>
+                                    <span [classList]="edicion ? '':'activo' "><input type="text" [classList]="edicion ? '':'activo' " [value]="[item.montoATM]" [disabled]="edicion"></span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
-                                    <span><input type="text" [value]="[item.Nombre]"></span>
+                                    <span>Monto autorizado ATM:</span>
+                                    <span [classList]="edicion ? '':'activo' "><input type="text" [classList]="edicion ? '':'activo' " [value]="[item.transaccionATM]" [disabled]="edicion"></span>
                                 </div>
-                            }
                                 <div>
-                                    <span>Usuario:</span>
+                                    <span>Auditoría</span>
                                     <span>Descargar</span>
                                 </div>
                                 <div>
-                                    <span>Usuario:</span>
+                                    <span>Movimiento</span>
                                     <span>Descargar</span>
                                 </div>
-                        </div>
-                        <div class="btnAccionesObservaciones">
-                            <button type="button" >Cancelar</button>
-                            <button type="button" >Guardar cambios</button>
-                        </div>
+                            </div>
+                            <div class="btnAccionesObservaciones">
+                                <button type="button" (click)="edicionInactivo()">Cancelar</button>
+                                <button type="button" (click)="edicionInactivo()">Guardar cambios</button>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>

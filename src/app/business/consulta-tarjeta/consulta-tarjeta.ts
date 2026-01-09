@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-prueba',
+  selector: 'app-consulta-tarjeta',
   imports: [],
-  templateUrl: './prueba.html',
-  styleUrl: './prueba.css',
+  templateUrl: './consulta-tarjeta.html',
+  styleUrl: './consulta-tarjeta.css',
 })
-export class Prueba implements OnInit{
-  
+export class ConsultaTarjeta implements OnInit {
+
+  constructor(
+
+  ){
+  }
 
   loginUser:string = '';
 

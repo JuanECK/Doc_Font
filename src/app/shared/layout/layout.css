@@ -3,7 +3,7 @@
     flex-direction: row; */
     display: grid;
     grid-template-columns: 223px auto;
-    height: 900px;
+    /* height: 850px; */
     /* height: 100%; */
 }
 .sidebar-component{
@@ -36,4 +36,26 @@
    /* height: 100%; */
    /* height: 100vh; */
    /* background: var(--background-Gradient2);  */
+}
+.logout{
+    display: flex;
+    justify-content: center;
+
+}
+.logout button{
+    background: var(--background-Gradient1);
+    width: 135px;
+    height: 38px;
+    border-radius: 50px;
+    border: none;
+    color: var(--Blanco);
+     margin-top: 20px;
+     font-weight: var(--Normal);
+     box-shadow: -4px 6px 6px rgba(0, 0, 0, 0.5);
+     cursor: pointer;
+}
+.logout button img{
+    /* width: 100px; */
+    position: relative;
+    bottom: 7px;
 }

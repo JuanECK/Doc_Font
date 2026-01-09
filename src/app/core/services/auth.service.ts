@@ -1,4 +1,6 @@
 import { Injectable } from "@angular/core";
+import { environment } from "../../../environments/environments";
+import { Router } from "@angular/router";
 
 @Injectable({
     providedIn:'root'
@@ -6,11 +8,17 @@ import { Injectable } from "@angular/core";
 
 export class AuthLoginService {
 
+    constructor(
+        private router: Router,
+    ){}
+
+    private _http:string = `${environment.apiUrl}`
+
     async login( email:string, pass:string ){
         // console.log(email, pass)
         try {
             let dataCookie:boolean = true;
-            const response = await fetch( 'http://localhost:3000/auth/login',{
+            const response = await fetch( this._http + 'auth/login',{
                 method:'POST',
                 credentials:'include',
                 headers:{
@@ -42,6 +50,27 @@ export class AuthLoginService {
 
     }
 
+    async logOut()  {
+
+        try {
+            const response = await fetch( this._http+'auth/logout',{
+                method:'GET',
+                credentials:'include',
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            } )
+            const data = await response.json();
+            console.log(data.status)
+            if( data.status == 200 ){
+                localStorage.clear();
+                this.router.navigateByUrl('/login')
+             }
+        } catch (error) {
+            throw new Error();
+        }
+
+    }
 
     async isAutenticate(){
         let dataCookie:boolean = false;
@@ -55,7 +84,7 @@ export class AuthLoginService {
                 }
             } )
             const data = await response.json();
-            // console.log(data)
+
             if( data.response === true ){
                 dataCookie = true;
             }else{

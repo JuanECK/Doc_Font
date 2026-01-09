@@ -5,6 +5,8 @@ import { Dashboard } from './business/dashboard/dashboard';
 import { Prueba } from './business/prueba/prueba';
 import { Layout } from './shared/layout/layout';
 import { LoginGuardService } from './core/guard/login.guard';
+import { Error404 } from './error404/error404';
+import { ConsultaTarjeta } from './business/consulta-tarjeta/consulta-tarjeta';
 
 export const routes: Routes = [
     {
@@ -13,6 +15,7 @@ export const routes: Routes = [
         children:[
             {path:'', redirectTo: 'Dashboard', pathMatch: 'full'},
             {path:'Dashboard', component: Dashboard},
+            {path:'once/consultaTarjeta', component: ConsultaTarjeta},
             {path:'once/clientes', component:Clientes},
             {path:'once/prueba', component:Prueba}
         ]
@@ -22,6 +25,9 @@ export const routes: Routes = [
         // de lo contrario dirigirlo a Dashboard
         path:'login', component: Login,
     },
+    {
+        path:'**', component:Error404,
+    }
     
 ];
 

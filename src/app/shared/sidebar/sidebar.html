@@ -1,5 +1,6 @@
 <aside class="sidebar">
     <div class="sidebar-header">
+        <!-- <img src="img_Doc/" alt=""> -->
         <h2>Once Capital</h2>
     </div>
             <ul class="dropdown-menu">
@@ -13,18 +14,18 @@
             <ul class="dropdown-menu">
                 <li class="nav-item-chevron" >
                     <div class="elemento-chevron" >
-                        <a (click)="clicEventMenu($event)" class="nav-item dropdown-title"><p #onceCapital>Once Capital <img src="img_Doc/chevron_down.png" alt="link-side" id="img"></p></a>
+                        <a (click)="clicEventMenu($event)" class="nav-item dropdown-title "><p class="menuDesplegadoActivo" #onceCapital>Once Capital <img class="rotar-off" src="img_Doc/chevron_down.png" alt="link-side" id="img"></p></a>
                     <!-- <a onclick="$event.stopPropagation()" class="nav-item dropdown-title"><p>Once Capital <img src="img_Doc/chevron_down.png" alt="link-side"></p></a> -->
                     </div>
                     <ul class="dropdown-menu-toggle"#toggle1>
                         <li class="nav-item">
                             <div class="element-a">
                                     <a [routerLink]="['/once/clientes']" class="nav-item dropdown-link" (click)="desactivarLink(2)"><p routerLinkActive="link-Active">Clientes</p></a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="element-a">
-                                    <a href="" class="nav-item dropdown-link"><p>Consulta de tarjeta</p> </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="element-a">
+                                <a [routerLink]="['/once/consultaTarjeta']" class="nav-item dropdown-link" (click)="desactivarLink(2)"><p routerLinkActive="link-Active">Consulta de tarjeta</p></a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -70,7 +71,7 @@
             <ul class="dropdown-menu">
                 <li class="nav-item-chevron" >
                         <div class="elemento-chevron" >
-                            <a (click)="clicEventMenu($event)" class="nav-item dropdown-title"><p>Nominon <img src="img_Doc/chevron_down.png" alt="link-side"  id="img"></p></a>
+                            <a (click)="clicEventMenu($event)" class="nav-item dropdown-title"><p class="menuDesplegadoActivo">Nominon <img src="img_Doc/chevron_down.png" alt="link-side"  id="img"></p></a>
                         </div>
                     <ul class="dropdown-menu-toggle" #toggle1>
                         <li class="nav-item">

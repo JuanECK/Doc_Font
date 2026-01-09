@@ -31,7 +31,10 @@ constructor(
 
   ngOnInit(): void {
 
-    this.isLoggin()
+    // if( localStorage.getItem('sesion') ){
+      this.isLoggin()
+      // return
+    // }
 
   }
 
